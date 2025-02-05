@@ -1,0 +1,19 @@
+# ML 1, ISP RAS, Spring 2025
+
+|Date| Lectures | Practice sessions | Home assignments|
+|----|----|----| :----: |
+| 13.02.2025 | [1. Введение. Обзор постановок ML задач. Типы задач: классификация, регрессия, кластеризация с примерами. Данные.](./lectures/lecture1/) | [Pandas. numpy.](./seminars/seminar1/01_numpy_pandas_student.ipynb) | [Home assignment 1](./hw/hw1/student/ISP_HW1_NUMPY&PANDAS.ipynb) <br> Deadline: (26.02.2025)|
+<!--
+|  | [2. Линейная регрессия через наименьшее отклонение и максимум правдоподобия. Онлайн и оффлайн постановка обучения. ](./lectures/lecture2/) | [Обработка данных.](./seminars/seminar2/02_data_processing_student.ipynb) | |
+|  | [3. Оптимизация. От решения линейной системы к GD, ускорение, Ньютон, SGD. Особенности сходимости.](./lectures/lecture3/) | [Метрика качества. KNN. Sklearn](./seminars/seminar3/03_knn_metrics_sklearn.ipynb) |  [Home assignment 2]() <br> Deadline: | 
+|  | [4. Субградиентный спуск. AdaGrad, Adam. Регуляризация l_1, l_2. Проксимальный оператор](./lectures/lecture4/) | [Валидация. Подбор гипепараметров. Регуляризация](./seminars/seminar4/04_regularization_hyperopt_validation.ipynb) |  | 
+|  | [5. Логистическая регрессия](./lectures/lecture5/) | [Многоклассовая классификация](./seminars/seminar5/) |  |
+|  | [6. PCA & friends](./lectures/lecture6/) | [Задача кластеризации](./seminars/seminar6/) |  |
+|  | [7. SVM](./lectures/lecture7/) | [SVM](./seminars/seminar7/) |  |
+|  | [8. Решающие деревья](./lectures/lecture8/) | [Решающие деревья](./seminars/seminar8/) |  |
+|  | [9. Ассамблирование](./lectures/lecture9/) | [Разбор домашних заданий по темам 1 - 9]() |  |
+|  | [10. Градиентный бустинг.](./lectures/lecture10/) | [Градиентный бустинг. Сравнение библиотек.](./seminars/seminar10/) |  |
+|  | [11. Градиентный бустинг.](./lectures/lecture11/) | [Матрично-векторное дифференцирование.](./seminars/seminar11/) |  |
+|  | [12. Введение в DL.](./lectures/lecture12/) | [Библиотеки автоматического дифференцирования. Pytorch. Обучаем свою первую рекуррентную сеть.](./seminars/seminar12/) |  |
+|  | [13. Введение в DL.](./lectures/lecture13/) | [Советы по обучению нейронных сетей.](./seminars/seminar13/) |  |
+-->
