@@ -3,8 +3,8 @@
 |Date| Lectures | Practice sessions | Home assignments|
 |----|----|----| :----: |
 | 13.02.2025 | [1. Введение. Обзор постановок ML задач. Типы задач: классификация, регрессия, кластеризация с примерами. Данные.](./lectures/lecture1/) | [Pandas. numpy.](./seminars/seminar1/01_numpy_pandas_student.ipynb) | [Home assignment 1](./hw/hw1/) <br> Deadline: (26.02.2025)|
+| 20.02.2025 | [2. Линейная регрессия через наименьшее отклонение и максимум правдоподобия. Онлайн и оффлайн постановка обучения. ](./lectures/lecture2/) | [Обработка данных.](./seminars/seminar2/02_data_processing_student.ipynb) | |
 <!--
-|  | [2. Линейная регрессия через наименьшее отклонение и максимум правдоподобия. Онлайн и оффлайн постановка обучения. ](./lectures/lecture2/) | [Обработка данных.](./seminars/seminar2/02_data_processing_student.ipynb) | |
 |  | [3. Оптимизация. От решения линейной системы к GD, ускорение, Ньютон, SGD. Особенности сходимости.](./lectures/lecture3/) | [Метрика качества. KNN. Sklearn](./seminars/seminar3/03_knn_metrics_sklearn.ipynb) |  [Home assignment 2]() <br> Deadline: | 
 |  | [4. Субградиентный спуск. AdaGrad, Adam. Регуляризация l_1, l_2. Проксимальный оператор](./lectures/lecture4/) | [Валидация. Подбор гипепараметров. Регуляризация](./seminars/seminar4/04_regularization_hyperopt_validation.ipynb) |  | 
 |  | [5. Логистическая регрессия](./lectures/lecture5/) | [Многоклассовая классификация](./seminars/seminar5/) |  |
