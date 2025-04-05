@@ -8,9 +8,9 @@
 | 06.03.2025 | [4. Субградиентный спуск. AdaGrad, Adam. Регуляризация l_1, l_2. Проксимальный оператор](./lectures/lecture4/) | [Валидация. Подбор гипепараметров. Регуляризация](./seminars/seminar4/04_regularization_hyperopt_validation.ipynb) |  |
 | 13.03.2025 | [5. Логистическая регрессия](./lectures/lecture5/ISP_RAS_ML_Spring_2024_5th_lecture.pdf) | [Многоклассовая классификация](./seminars/seminar5/05_multiclass_classification.ipynb) | [Home assignment 3](./hw/hw3/ISP_HW3_LogReg_Opt_HPO.ipynb) <br> Deadline: (26.03.2025) |
 | 20.03.2025 | [6. PCA & friends](./lectures/lecture6/) | [Задача кластеризации](./seminars/seminar6/06_clusterization.ipynb) |  |
+| 27.03.2025 | [7. SVM](./lectures/lecture7/) | [SVM](./seminars/seminar7/07_svm.ipynb) |  |
+| 03.04.2025 | [8. Решающие деревья](./lectures/lecture8/) | [Решающие деревья](./seminars/seminar8/08_decision_tree.ipynb) | [Home assignment 4](./hw/hw4/) <br> Deadline: (18.04.2025) |
 <!--
-|  | [7. SVM](./lectures/lecture7/) | [SVM](./seminars/seminar7/) |  |
-|  | [8. Решающие деревья](./lectures/lecture8/) | [Решающие деревья](./seminars/seminar8/) |  |
 |  | [9. Ансамблирование](./lectures/lecture9/) | [Разбор домашних заданий по темам 1 - 9]() |  |
 |  | [10. Градиентный бустинг.](./lectures/lecture10/) | [Градиентный бустинг. Сравнение библиотек.](./seminars/seminar10/) |  |
 |  | [11. Градиентный бустинг.](./lectures/lecture11/) | [Матрично-векторное дифференцирование.](./seminars/seminar11/) |  |
