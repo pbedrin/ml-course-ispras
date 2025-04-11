@@ -10,8 +10,8 @@
 | 20.03.2025 | [6. PCA & friends](./lectures/lecture6/) | [Задача кластеризации](./seminars/seminar6/06_clusterization.ipynb) |  |
 | 27.03.2025 | [7. SVM](./lectures/lecture7/ISP_RAS_ML_Spring_2024_7th_lecture%20(1).pdf) | [SVM](./seminars/seminar7/07_svm.ipynb) |  |
 | 03.04.2025 | [8. Решающие деревья](./lectures/lecture8/ISP_decision_trees_lecture_8.pdf) | [Решающие деревья](./seminars/seminar8/08_decision_tree.ipynb) | [Home assignment 4](./hw/hw4/) <br> Deadline: (18.04.2025) |
+| 10.04.2025 | [9. Ансамблирование](./lectures/lecture9/ISP_RAS_ML_Spring_2025_9th_lecture%20(2).pdf) |  |  |
 <!--
-|  | [9. Ансамблирование](./lectures/lecture9/) | [Разбор домашних заданий по темам 1 - 9]() |  |
 |  | [10. Градиентный бустинг.](./lectures/lecture10/) | [Градиентный бустинг. Сравнение библиотек.](./seminars/seminar10/) |  |
 |  | [11. Градиентный бустинг.](./lectures/lecture11/) | [Матрично-векторное дифференцирование.](./seminars/seminar11/) |  |
 |  | [12. Введение в DL.](./lectures/lecture12/) | [Библиотеки автоматического дифференцирования. Pytorch. Обучаем свою первую рекуррентную сеть.](./seminars/seminar12/) |  |
