@@ -13,7 +13,7 @@
 | 10.04.2025 | [9. Ансамблирование](./lectures/lecture9/ISP_RAS_ML_Spring_2025_9th_lecture%20(2).pdf) |  |  |
 | 17.04.2025 | [10. Градиентный бустинг.](./lectures/lecture10/) | [Градиентный бустинг. Сравнение библиотек.](./seminars/seminar10/10_boosting.ipynb) | [Home assignment 5](./hw/hw5/ISP_HW5_Clustering_SVM.ipynb) <br> Deadline: (27.04.2025) |
 | 24.04.2025 | [11. Градиентный бустинг.](./lectures/lecture11/ISP_RAS_ML_Spring_2024_11th_lecture.pdf) | [Матрично-векторное дифференцирование.](./seminars/seminar11/) | [Home assignment 6](./hw/hw6/ISP_HW6_Ensembles.ipynb) <br> Deadline: (11.05.2025) |
-<!--
-|  | [12. Введение в DL.](./lectures/lecture12/) | [Библиотеки автоматического дифференцирования. Pytorch. Обучаем свою первую рекуррентную сеть.](./seminars/seminar12/) |  |
+| 15.05.2025 | [12. Введение в DL.](./lectures/lecture12/) | [Библиотеки автоматического дифференцирования. Pytorch. Обучаем свою первую рекуррентную сеть.](./seminars/seminar12/) | [Home assignment 7](./hw/hw7/ISP_HW7_MVD.pdf) <br> Deadline: (19.05.2025) |
+<!-- 
 |  | [13. Введение в DL.](./lectures/lecture13/) | [Советы по обучению нейронных сетей.](./seminars/seminar13/) |  |
 -->
