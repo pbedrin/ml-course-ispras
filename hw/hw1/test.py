@@ -13,7 +13,6 @@ class EuclidianDistanceTest(TestCase):
 
         xx_pred = euclidean_distance(x, x)
         xx_true = np.ones(shape) - np.eye(*shape)
-        
         self.assertTrue(np.allclose(xx_pred, xx_true))
 
     def test_base_scenario_zeros(self):
@@ -35,7 +34,7 @@ class EuclidianDistanceTest(TestCase):
 
         xx_pred = euclidean_distance(x, y)
         xx_true = cdist(x, y)
-
+        
         self.assertTrue(np.allclose(xx_pred, xx_true))
 
 

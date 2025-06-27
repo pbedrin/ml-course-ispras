@@ -47,7 +47,7 @@ class LinearLoss(BaseLoss):
         -------
         : float
         """
-        pass
+        return np.mean((X @ w - y) ** 2) + self.l2_coef * np.sum(w[1:] ** 2)
 
     def grad(self, X, y, w):
         """
@@ -62,5 +62,4 @@ class LinearLoss(BaseLoss):
         -------
         : 1d numpy.ndarray
         """
-        pass
-
+        return (1 / y.shape[0]) * (2 * X.T @ (X @ w - y)) + 2 * self.l2_coef * np.r_[0, w[1:]]

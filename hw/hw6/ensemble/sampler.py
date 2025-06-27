@@ -27,7 +27,12 @@ class BaseSampler:
     	### ╰( ͡° ͜ʖ ͡° )つ──────☆*:・ﾟ
     	#############################
 
-        raise NotImplementedError('Put your code here')
+        n_samples = int(n_objects * self.max_samples)
+
+        if self.bootstrap:
+            return self.random_state.choice(np.arange(n_objects), size=n_samples, replace=True)
+        return self.random_state.choice(np.arange(n_objects), size=n_samples, replace=False)
+
 
     def sample(self, x, y=None):
         # abstract method
