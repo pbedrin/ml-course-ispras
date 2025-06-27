@@ -31,12 +31,13 @@ class Booster:
         self.params = params
 
     def _fit_first_estimator(self, X, y) -> Booster:
-
-        #############################
-        ### ╰( ͡° ͜ʖ ͡° )つ──────☆*:・ﾟ
-        #############################
-
-        raise NotImplementedError('Put your code here')
+        feature_indices = self.feature_sampler.sample_indices(X.shape[1])
+        estimator = self.base_estimator(**self.params)
+        estimator.fit(X[:, feature_indices], y)
+        self.estimators.append(estimator)
+        self.indices.append(feature_indices)
+        self.weights.append(1.0)        
+        return self
 
     def _gradient(self, y_true, y_pred):
         raise NotImplementedError
@@ -56,16 +57,18 @@ class Booster:
             4) got to step 2
         Don't forget, that each estimator has its own feature indices for prediction
         """
-
         self.estimators = []
         self.indices = []
         self.weights = []
+        
+        self._fit_first_estimator(X, y)
+        predictions = self.predict(X)
 
-        #############################
-        ### ╰( ͡° ͜ʖ ͡° )つ──────☆*:・ﾟ
-        #############################
-
-        raise NotImplementedError('Put your code here')
+        for _ in range(1, self.n_estimators):
+            self._fit_base_estimator(X, y, predictions)
+            predictions = self.predict(X)
+        
+        return self
 
     def predict(self, X) -> np.ndarray:
         """
@@ -82,12 +85,13 @@ class Booster:
         """
         if not (0 < len(self.estimators) == len(self.indices) == len(self.weights)):
             raise RuntimeError('Booster is not fitted', (len(self.estimators), len(self.indices)))
-
-        #############################
-        ### ╰( ͡° ͜ʖ ͡° )つ──────☆*:・ﾟ
-        #############################
-
-        raise NotImplementedError('Put your code here')
+        
+        predictions = self.estimators[0].predict(X[:, self.indices[0]]) * self.weights[0]
+        
+        for estimator, indices, weight in zip(self.estimators[1:], self.indices[1:], self.weights[1:]):
+            predictions += self.lr * weight * estimator.predict(X[:, indices])
+        
+        return predictions
 
 
 class GradientBoostingClassifier(Booster):
@@ -110,23 +114,14 @@ class GradientBoostingClassifier(Booster):
         """
         Calculate gradient for NLL
         """
-
-        #############################
-        ### ╰( ͡° ͜ʖ ͡° )つ──────☆*:・ﾟ
-        #############################
-
-        raise NotImplementedError('Put your code here')
+        return y_pred - y_true
 
     def _loss(self, y_true, y_pred) -> np.ndarray:
         """
         Calculate average NLL
         """
-
-        #############################
-        ### ╰( ͡° ͜ʖ ͡° )つ──────☆*:・ﾟ
-        #############################
-
-        raise NotImplementedError('Put your code here')
+        y_pred = np.clip(y_pred, np.finfo(np.float32).eps, 1 - np.finfo(np.float32).eps, dtype=np.float64)  # Защита от log(0)
+        return -np.mean(y_true * np.log(y_pred) + (1 - y_true) * np.log(1 - y_pred))
 
     def _fit_base_estimator(self, X, y, predictions) -> GradientBoostingClassifier:
         """
@@ -142,12 +137,22 @@ class GradientBoostingClassifier(Booster):
         
         For one-dimensional optimization you may use scipy.optimize.minimize_scalar
         """
+        gradient = -self._gradient(y, predictions)
+        feature_indices = self.feature_sampler.sample_indices(X.shape[1])
+        
+        estimator = self.base_estimator(**self.params)
+        estimator.fit(X[:, feature_indices], gradient)
 
-        #############################
-        ### ╰( ͡° ͜ʖ ͡° )つ──────☆*:・ﾟ
-        #############################
-
-        raise NotImplementedError('Put your code here')
+        self.estimators.append(estimator)
+        self.indices.append(feature_indices)
+        
+        estimator_predictions = estimator.predict(X[:, feature_indices])
+        optimize_res = minimize_scalar(
+            lambda weight: self._loss(y, predictions + self.lr * weight * estimator_predictions)
+        )
+        self.weights.append(optimize_res.x)
+        
+        return self
 
     def predict_proba(self, X):
         return np.clip(super().predict(X), 0, 1)

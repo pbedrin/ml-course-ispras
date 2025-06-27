@@ -44,7 +44,15 @@ class Bagger:
         ### ╰( ͡° ͜ʖ ͡° )つ──────☆*:・ﾟ
         #############################
 
-        raise NotImplementedError('Put your code here')
+        for _ in range(self.n_estimators):
+            X_sample, y_sample = self.object_sampler.sample(X, y)
+            feauture_indices = self.feature_sampler.sample_indices(X.shape[1])
+            estimator = self.base_estimator(**self.params)
+            estimator.fit(X_sample[:, feauture_indices], y_sample)
+            self.estimators.append(estimator)
+            self.indices.append(feauture_indices)
+        
+        return self
 
     def predict_proba(self, X) -> np.ndarray:
         """
@@ -62,7 +70,9 @@ class Bagger:
         ### ╰( ͡° ͜ʖ ͡° )つ──────☆*:・ﾟ
         #############################
 
-        raise NotImplementedError('Put your code here')
+        all_probas = [estimator.predict_proba(X[:, feature_indices])
+                      for estimator, feature_indices in zip(self.estimators, self.indices)]
+        return np.mean(all_probas, axis=0)
 
     def predict(self, X):
         """
